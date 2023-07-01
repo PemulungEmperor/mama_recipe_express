@@ -9,7 +9,6 @@ const productController = {
       .selectAll()
       .then((result) => {
         res.json(result.rows);
-        console.log(result);
       })
       .catch((err) => {
         response(res, err, 400, "Error");
@@ -47,7 +46,7 @@ const productController = {
       video_recipe,
       photoPath,
     };
-    console.log(req.file);
+
     productModel
       .addProduct(data)
       .then((result) => {
