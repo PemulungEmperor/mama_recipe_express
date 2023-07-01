@@ -1,0 +1,618 @@
+{
+	"info": {
+		"_postman_id": "14147a94-8592-4e9b-ada7-d7369f31a1ed",
+		"name": "foodRecipePijarCamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20819330"
+	},
+	"item": [
+		{
+			"name": "user_api",
+			"item": [
+				{
+					"name": "list_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTY4MDE3NTI3MCwiZXhwIjoxNjgwMTc1MzAwfQ.qbbdJ3ybg9VH8aFx83z41x5MkV5LGeNSqln9TacIbNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2ODAxNzU4MDIsImV4cCI6MTY4MDE3NTgzMn0.GtebSiVggf-Lq-5uJ3YwKKbwelY1ZfA1i4iNZHT8N1I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"abc\",\r\n    \"email\" : \"abc@mailinator.com\",\r\n    \"password\": \"123\",\r\n    \"confirmPassword\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2ODAxNzU4MDIsImV4cCI6MTY4MDE3NTgzMn0.GtebSiVggf-Lq-5uJ3YwKKbwelY1ZfA1i4iNZHT8N1I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\":\"customer@mailinator.com\",\r\n   \"password\" : \"234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2ODAxNzU4MDIsImV4cCI6MTY4MDE3NTgzMn0.GtebSiVggf-Lq-5uJ3YwKKbwelY1ZfA1i4iNZHT8N1I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"admin2\",\r\n    \"email\"    : \"admin2@mailinator.com\",\r\n    \"password\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/update/32",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken_user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_image",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photoPath",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/image/60",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"image",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_image",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/image/60",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"image",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "cccc",
+									"type": "text"
+								},
+								{
+									"key": "photoPath",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/1674123063052.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/update/profile/59",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"update",
+								"profile",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_username",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"aaabbb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/update/username/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"update",
+								"username",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product_api",
+			"item": [
+				{
+					"name": "list_product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"food_name\" : \"Delicious Potato Chips hoho\",\r\n    \"ingredients\" : \"Starch\",\r\n    \"video_recipe\" : \"https://www.potatoexamplenew\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/product/99",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_by_category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/category",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_by_name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/product/k",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"k"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_redis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/getFromRedis/52",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"getFromRedis",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "limit",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/pagination",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pagination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "food_name",
+									"value": "Seekh Kabab",
+									"type": "text"
+								},
+								{
+									"key": "ingredients",
+									"value": "Beef Boneless, Tomato, Lettuce, Flour",
+									"type": "text"
+								},
+								{
+									"key": "video_recipe",
+									"value": "https://www.youtube.com/embed/ov13Yr3MLCQ",
+									"type": "text"
+								},
+								{
+									"key": "photoPath",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/seekh kabab.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_by_user_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/productUser/59",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"productUser",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latest_product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "redux_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
