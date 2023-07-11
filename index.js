@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // app.use(cors())
-app.use(cors({ credentials: true, origin: "https://mama-recipe-blush.vercel.app" }));
+app.use(cors({ credentials: true, origin: "*" }));
 app.use(morgan("combined"));
 
 //CSP
