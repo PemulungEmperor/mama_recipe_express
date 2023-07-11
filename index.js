@@ -38,6 +38,8 @@ app.use(productRouter);
 //   res.sendFile(path.join(__dirname, "./thefrontend/build", "index.html"));
 // });
 
+// hehe
+
 app.listen(port, () => {
   console.log(`SERVER LISTEN ON PORT ${port}`);
 });
