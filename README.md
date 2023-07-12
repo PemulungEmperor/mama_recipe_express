@@ -4,7 +4,7 @@
 
 Here's API For Mama Recipe (see what Mama Recipe from mama_recipe repo in this account)
 You can access with this link :
-https://vercel.com/pemulungemperor/mama-recipe-express
+https://mama-recipe-native-express.vercel.app/
 
 ## Technologies
 
@@ -39,7 +39,7 @@ And to run this project use
 | :-------- | :------- | :------------------------- |
 | | `string` | You can check all users from ur DB |
 
-Execution : https://vercel.com/pemulungemperor/mama-recipe-express/users
+Execution : https://mama-recipe-native-express.vercel.app/users
 
 #### Get specific user
 
